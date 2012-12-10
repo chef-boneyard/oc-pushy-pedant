@@ -633,6 +633,7 @@ describe "end-to-end-test" do
 
     context 'and the server goes down and comes back up' do
       before :each do
+        sleep 1
         restart_server
         wait_for_server_restart
         wait_for_node_status("online", "DONKEY")
