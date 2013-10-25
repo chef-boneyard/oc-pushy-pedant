@@ -25,13 +25,13 @@ This repository currently requires a .deb build from the pushy branch of opscode
 4. Install the pushy server deb. It's easiest to grab a copy from jenkins.
 
         Browse to
-        http://ci.opscode.us/job/opscode-push-jobs-server-build/build_os=ubuntu-10-04,machine_architecture=x64,role=opc-builder/
+        http://ci.opscode.us/job/pushy-server-build/build_os=ubuntu-10-04,machine_architecture=x64,role=opc-builder/
         to discover the latest version of the deb, then grab it and
         install it.
 
-        wget http://ci.opscode.us/job/opscode-push-jobs-server-build/build_os=ubuntu-10-04,machine_architecture=x64,role=opc-builder/opscode-push-jobs-server_0.0.1-37-g40fc888-1.ubuntu.10.04_amd64.deb
+        wget http://ci.opscode.us/job/pushy-server-build/build_os=ubuntu-10-04,machine_architecture=x64,role=opc-builder/pushy-server_0.0.1-37-g40fc888-1.ubuntu.10.04_amd64.deb
 
-        sudo dpkg -i opscode-push-jobs-server_0.0.1-37-g40fc888-1.ubuntu.10.04_amd64.deb
+        sudo dpkg -i pushy-server_0.0.1-37-g40fc888-1.ubuntu.10.04_amd64.deb
 
 5. Load pushy server
 

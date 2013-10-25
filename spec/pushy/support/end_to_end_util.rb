@@ -160,7 +160,7 @@ shared_context "end_to_end_util" do
   end
 
   def pushy_homedir
-    "/opt/opscode-push-jobs-server/embedded/service/opscode-pushy-server"
+    "/opt/pushy-server/embedded/service/opscode-pushy-server"
   end
 
   def restart_server
