@@ -11,4 +11,4 @@ gemspec
 # on.
 gem 'chef-pedant', :git => "git@github.com:opscode/chef-pedant.git", :tag => '1.0.22'
 gem 'oc-chef-pedant', :git => "git@github.com:opscode/oc-chef-pedant.git", :tag => '1.0.20'
-gem 'opscode-pushy-client', :git => "git@github.com:opscode/opscode-pushy-client.git", :tag => '1.0.0'
+gem 'opscode-pushy-client', :git => "git@github.com:opscode/opscode-pushy-client.git", :tag => 'cm/OC-9976-0MQ3'
