@@ -1,7 +1,7 @@
 source :rubygems
 
 gem "chef", "~> 11.6.2"
-gem "zmq", "~> 2.1.4"
+gem "zmq", :git => "git@github.com:opscode/rbzmq.git"
 
 gemspec
 
