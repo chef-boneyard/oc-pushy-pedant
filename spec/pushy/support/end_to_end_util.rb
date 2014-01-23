@@ -81,6 +81,7 @@ shared_context "end_to_end_util" do
     end
 
     begin
+      offline_nodes = nil;
       Timeout::timeout(5) do
         while true
           offline_nodes = names.select { |name| !@clients[name][:client].online? }
