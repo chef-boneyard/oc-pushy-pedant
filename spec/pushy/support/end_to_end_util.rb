@@ -68,6 +68,8 @@ shared_context "end_to_end_util" do
       )
       @clients[name][:client] = new_client
       @clients[name][:client].start
+      # Override the splay configuration to speed up reconfigure and avoid timeouts:
+      @clients[name][:client].config['push_jobs']['reconfigure_splay'] = 1
     end
 
     names.each do |name|
@@ -79,6 +81,7 @@ shared_context "end_to_end_util" do
     end
 
     begin
+      offline_nodes = nil;
       Timeout::timeout(5) do
         while true
           offline_nodes = names.select { |name| !@clients[name][:client].online? }
