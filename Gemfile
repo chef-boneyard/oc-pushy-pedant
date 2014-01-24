@@ -1,5 +1,6 @@
 source :rubygems
 
+gem "rest-client", :git => "git://github.com/opscode/rest-client.git"
 gem "chef", "~> 11.6.2"
 gem "zmq", :git => "git@github.com:opscode/rbzmq.git"
 
