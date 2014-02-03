@@ -1,7 +1,6 @@
 source :rubygems
 
 gem "chef", "~> 11.6.2"
-gem "zmq", "~> 2.1.4"
 
 gemspec
 
@@ -12,3 +11,4 @@ gemspec
 gem 'chef-pedant', :git => "git@github.com:opscode/chef-pedant.git", :tag => '1.0.22'
 gem 'oc-chef-pedant', :git => "git@github.com:opscode/oc-chef-pedant.git", :tag => '1.0.20'
 gem 'opscode-pushy-client', :git => "git@github.com:opscode/opscode-pushy-client.git", :tag => '1.0.0'
+gem "zmq", :git => "https://github.com/opscode/rbzmq", :branch => "master"

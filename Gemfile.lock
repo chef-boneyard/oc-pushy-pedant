@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/opscode/rbzmq
+  revision: c1c3a95b5e8613c902eb675280748f7031a9cf68
+  branch: master
+  specs:
+    zmq (2.2.0)
+
+GIT
   remote: git@github.com:opscode/chef-pedant.git
   revision: be24c567600570679a5d801b0d601d07ebabb312
   tag: 1.0.22
@@ -107,7 +114,6 @@ GEM
     systemu (2.5.2)
     uuidtools (2.1.4)
     yajl-ruby (1.1.0)
-    zmq (2.1.4)
 
 PLATFORMS
   ruby
@@ -118,4 +124,4 @@ DEPENDENCIES
   oc-chef-pedant!
   oc-pushy-pedant!
   opscode-pushy-client!
-  zmq (~> 2.1.4)
+  zmq!
