@@ -32,8 +32,8 @@ GIT
 
 GIT
   remote: git@github.com:opscode/opscode-pushy-client.git
-  revision: 6fd222bfc159bc1154f1658defe4f04eb6d95fb2
-  tag: 1.0.0
+  revision: ce4be1c4ee03d379a0b48f8a1375c0b986a7da7c
+  branch: cm/OC-9976-0MQ3
   specs:
     opscode-pushy-client (0.0.1)
       chef (>= 0.10.12)
