@@ -33,7 +33,8 @@ describe "pushy config" do
   end
 
   let(:pushy_server) {
-    Pedant.config[:pushy_server]
+    # We don't actually provide pushy_server in our current config file
+    Pedant.config[:pushy_server] || URI(Pedant.config[:chef_server]).host 
   }
 
   # TODO: should get this from config instead of hard-coding
@@ -176,7 +177,7 @@ describe "pushy config" do
       end
 
       it 'returns a 200 ("OK") for client' do
-        get(api_url("/pushy/config/pedant_non_admin_client"),
+        get(api_url("/pushy/config/#{platform.non_admin_client.name}"),
             platform.non_admin_client) do |response|
           response.should look_like({
                                       :status => 200
