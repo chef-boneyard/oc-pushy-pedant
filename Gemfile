@@ -1,7 +1,7 @@
 source :rubygems
 
 gem "chef", "~> 11.12.2"
-gem "zmq", "~> 2.1.4"
+gem "ffi-rzmq"
 
 gemspec
 
@@ -12,6 +12,6 @@ gem "rest-client", :git => "git://github.com/opscode/rest-client.git"
 # is not on RubyGems, so we have to lock the dependency here, too.  It
 # should be whatever the specified version of oc-chef-pedant depends
 # on.
-gem 'chef-pedant', :git => "git@github.com:opscode/chef-pedant.git", :tag => '1.0.28'
-gem 'oc-chef-pedant', :git => "git@github.com:opscode/oc-chef-pedant.git", :tag => '1.0.28'
-gem 'opscode-pushy-client', :git => "git@github.com:opscode/opscode-pushy-client.git", :tag => '1.0.1'
+gem 'chef-pedant', :path => '/srv/piab/mounts/chef-pedant'
+gem 'oc-chef-pedant', :path => '/srv/piab/mounts/oc-chef-pedant'
+gem 'opscode-pushy-client', :path => '/srv/piab/mounts/opscode-pushy-client'
