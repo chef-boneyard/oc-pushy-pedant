@@ -50,7 +50,7 @@ describe "end-to-end-test" do
       start_new_clients('DONKEY')
     end
 
-    it "heartbeat should be received when starting up", :focus=>true do
+    it "heartbeat should be received when starting up" do
       client = @clients['DONKEY'][:client]
       threshold = client.config['push_jobs']['heartbeat']['offline_threshold']
       heartbeater = client.instance_variable_get(:@heartbeater)
