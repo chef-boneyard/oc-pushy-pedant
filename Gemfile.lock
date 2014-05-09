@@ -7,13 +7,10 @@ GIT
       netrc (~> 0.7.7)
       rdoc (>= 2.4.2)
 
-PATH
-  remote: .
-  specs:
-    oc-pushy-pedant (0.0.1)
-
-PATH
-  remote: /srv/piab/mounts/chef-pedant
+GIT
+  remote: git@github.com:opscode/chef-pedant.git
+  revision: 429254b292c77c56b5abdb5f2d465a1dda7e58b5
+  tag: 1.0.28
   specs:
     chef-pedant (1.0.27)
       activesupport (~> 3.2.8)
@@ -27,19 +24,28 @@ PATH
       rspec-rerun (= 0.1.1)
       rspec_junit_formatter (~> 0.1.1)
 
-PATH
-  remote: /srv/piab/mounts/oc-chef-pedant
+GIT
+  remote: git@github.com:opscode/oc-chef-pedant.git
+  revision: 6036b0e98a023c884960356a98a4c436250a063e
+  tag: 1.0.28
   specs:
-    oc-chef-pedant (1.0.29)
+    oc-chef-pedant (1.0.28)
       chef-pedant (>= 1.0.0)
 
-PATH
-  remote: /srv/piab/mounts/opscode-pushy-client
+GIT
+  remote: git@github.com:opscode/opscode-pushy-client.git
+  revision: 64fc931ff36c4b0870d1f4ddfbeedba3e978d8bd
+  branch: ma/use-ffi-rzmq
   specs:
     opscode-pushy-client (1.0.2)
       chef (>= 11.12.2)
       ffi-rzmq
       uuidtools
+
+PATH
+  remote: .
+  specs:
+    oc-pushy-pedant (0.0.1)
 
 GEM
   remote: http://rubygems.org/

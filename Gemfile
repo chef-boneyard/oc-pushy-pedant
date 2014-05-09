@@ -14,4 +14,4 @@ gem "rest-client", :git => "git://github.com/opscode/rest-client.git"
 # on.
 gem 'chef-pedant', :git => "git@github.com:opscode/chef-pedant.git", :tag => '1.0.28'
 gem 'oc-chef-pedant', :git => "git@github.com:opscode/oc-chef-pedant.git", :tag => '1.0.28'
-gem 'opscode-pushy-client', :git => "git@github.com:opscode/opscode-pushy-client.git", :tag => '1.0.1'
+gem 'opscode-pushy-client', :git => "git@github.com:opscode/opscode-pushy-client.git", :branch => 'ma/use-ffi-rzmq'
