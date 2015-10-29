@@ -9,6 +9,5 @@ gem 'rest-client', :git => "https://github.com/chef/rest-client.git", :tag => ">
 
 # Note that oc-chef-pedant is a subdir of chef-server
 gem 'oc-chef-pedant', :git => "https://github.com/chef/chef-server.git", :tag => '12.1.0-rc.3'
-#
-# floating pushy-client on master as an experiment
-gem 'opscode-pushy-client', :git => "https://github.com/chef/opscode-pushy-client.git"
+
+gem 'opscode-pushy-client', :git => "https://github.com/chef/opscode-pushy-client.git", :branch=>'ma/fix_reconfigure_breakage'
