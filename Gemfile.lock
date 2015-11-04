@@ -18,10 +18,10 @@ GIT
 
 GIT
   remote: https://github.com/opscode/opscode-pushy-client.git
-  revision: e288b668fb2714780407ff526225375fbdc05bf5
+  revision: daddc644c92c4c5f921669120a7ef6ce827e9fc4
   branch: 1.3-stable
   specs:
-    opscode-pushy-client (1.3.3)
+    opscode-pushy-client (1.3.4)
       chef (>= 12.0)
       ffi-rzmq
       ohai
