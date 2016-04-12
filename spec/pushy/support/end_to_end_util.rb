@@ -76,7 +76,7 @@ shared_context "end_to_end_util" do
       # Delete chef client if it exists
       delete(api_url("/clients/#{name}"), admin_user)
 
-      require 'pp'
+      #require 'pp'
 
       # Create chef client and save key for pushy client
       #
@@ -86,7 +86,7 @@ shared_context "end_to_end_util" do
         response = post(api_url("/clients"), superuser, :payload => {"name" => name})
 
         puts "Got a #{response.code} response to a POST to /clients for client #{name}: (try #{retry_count})"
-        pp response
+        # pp response
         # 500 happens when keygen is behind; generating a key can take almost a sec on a slow box
         break if response.code < 500
         sleep client_creation_sleep
