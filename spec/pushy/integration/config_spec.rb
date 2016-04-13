@@ -24,6 +24,7 @@
 
 require 'pedant/rspec/auth_headers_util'
 require 'pushy/support/authorization_groups_util'
+require 'pushy/support/helper_util'
 
 describe "pushy config" do
   include_context "authorization_groups_util"
@@ -66,7 +67,7 @@ describe "pushy config" do
         "heartbeat" => {
           "out_addr" => "tcp://#{pushy_server}:10000",
           "command_addr" => "tcp://#{pushy_server}:10002",
-          "interval" => 10.0,
+          "interval" => heartbeat_interval,
           "offline_threshold" => 3,
           "online_threshold" => 2
         }

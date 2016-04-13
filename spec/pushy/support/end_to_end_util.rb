@@ -17,23 +17,9 @@
 
 require 'pushy_client'
 require 'timeout'
+require 'pushy/support/helper_util'
 
 shared_context "end_to_end_util" do
-  def heartbeat_interval
-    if @clients
-      @clients.first do |name|
-        @clients[name][:client].config['push_jobs']['heartbeat']['interval']
-      end
-    end
-  end
-
-  def threshold
-    if @clients
-      @clients.first do |name|
-        @clients[name][:client].config['push_jobs']['heartbeat']['offline_threshold']
-      end
-    end
-  end
 
   let (:sleep_time) { 0.2 }
 
@@ -42,7 +28,7 @@ shared_context "end_to_end_util" do
   let (:client_start_timeout) { 5 }
   let (:job_start_timeout) { 30 }
   let (:job_status_timeout_default) { 30 * heartbeat_interval }
-  let (:node_availability_timeout) { 10 * offline_threshold }
+  let (:node_availability_timeout) { 10 * 3 } # 3 is the offline_threshold
   let (:node_status_timeout) { 10 * heartbeat_interval }
   let (:server_restart_timeout) { 45 } # increasing this makes failing tests take longer, but salvages some slow runs
 
