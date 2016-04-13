@@ -28,6 +28,7 @@ require 'pushy/support/helper_util'
 
 describe "pushy config" do
   include_context "authorization_groups_util"
+  include_context "helper_util"
 
   def self.ruby?
     false
