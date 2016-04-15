@@ -27,13 +27,13 @@ shared_context "end_to_end_util" do
     # nodes are available, etc.  These are set very conservatively.
     let (:client_start_timeout) { 5 }
     let (:job_start_timeout) { 30 }
-    let (:job_status_timeout_default) { 30 * heartbeat_interval }
+    let (:job_status_timeout_default) { 30 * 10 }#heartbeat_interval }
     let (:node_availability_timeout) { 10 * 3 } # 3 is the offline_threshold
-    let (:node_status_timeout) { 10 * heartbeat_interval }
+    let (:node_status_timeout) { 10 * 10 }#heartbeat_interval }
     let (:server_restart_timeout) { 45 } # increasing this makes failing tests take longer, but salvages some slow runs
 
     let (:client_creation_retries) { 5 }  # how many times to retry a client creation
-    let (:client_creation_sleep) { 5 + heartbeat_interval } # how long to wait between retries
+    let (:client_creation_sleep) { 5 + 10 }#heartbeat_interval } # how long to wait between retries
 
     def echo_yahoo
       'sh ' + File.expand_path('../../support/echo_yahoo_to_tmp_pushytest', __FILE__)

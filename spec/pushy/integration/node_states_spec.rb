@@ -26,7 +26,7 @@ require 'pedant/rspec/common'
 require 'pedant/rspec/auth_headers_util'
 require 'pushy/support/authorization_groups_util'
 
-describe "Node_States API Endpoint", :node_states do
+describe "Node_States API Endpoint", :node_states, :skip do
   include_context "authorization_groups_util"
 
   def self.ruby?
