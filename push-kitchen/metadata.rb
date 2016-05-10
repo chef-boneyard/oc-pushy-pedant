@@ -1,0 +1,12 @@
+name 'push-kitchen'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures push-kitchen'
+long_description 'Installs/Configures push-kitchen'
+version '0.1.0'
+
+depends 'chef-ingredient'
+depends 'push-jobs'
+depends 'hostsfile'
+depends 'hurry-up-and-test'

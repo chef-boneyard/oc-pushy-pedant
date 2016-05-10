@@ -1,0 +1,26 @@
+---
+driver:
+  name: vagrant
+  forward_agent: yes
+  customize:
+      memory: 2048
+      cpus: 2
+  network:
+    - [ 'private_network', {type: 'dhcp'} ]
+
+provisioner:
+  name: nodes
+  require_chef_omnibus: true
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: server
+    run_list:
+      - recipe[push-kitchen::server]
+    attributes:
+  - name: client
+    run_list:
+      - recipe[push-kitchen::client]
+    attributes:
